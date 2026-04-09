@@ -1,5 +1,5 @@
 import React, { useEffect, useRef } from 'react';
-import { Button } from 'react-aria-components';
+
 import {
   FiSearch,
   FiMusic,
@@ -146,23 +146,21 @@ export const CommandPalette: React.FC<CommandPaletteProps> = ({
             onChange={(e) => setQuery(e.target.value)}
           />
           {query && (
-            <Button
-              onPress={() => setQuery('')}
-              className="ml-2 p-1 text-gray-400 hover:text-gray-600 dark:hover:text-gray-300 transition-colors duration-200"
-            >
-              <FiX className="w-4 h-4" />
-            </Button>
+            <button
+  onClick={() => setQuery('')}
+  className="ml-2 p-1 text-gray-400 hover:text-gray-600 dark:hover:text-gray-300 transition-colors duration-200"
+>
+  <FiX className="w-4 h-4" />
+</button>
           )}
-          <Button
-            onPress={onClose}
-            className="ml-2 p-1 text-gray-400 hover:text-gray-600 dark:hover:text-gray-300 transition-colors duration-200"
-          >
-            <span>
-              <kbd className="px-2 py-1 text-xs font-mono bg-gray-100 dark:bg-gray-800 rounded border">
-                ESC
-              </kbd>
-            </span>
-          </Button>
+          <button
+  onClick={onClose}
+  className="ml-2 p-1 text-gray-400 hover:text-gray-600 dark:hover:text-gray-300 transition-colors duration-200"
+>
+  <kbd className="px-2 py-1 text-xs font-mono bg-gray-100 dark:bg-gray-800 rounded border">
+    ESC
+  </kbd>
+</button>
         </div>
 
         {/* Search Results */}
