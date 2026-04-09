@@ -49,7 +49,7 @@ You need **Node.js 18+** and **npm**.
 ### 1. Clone and install
 
 ```bash
-git clone https://github.com/your-username/savify.git
+git clone https://github.com/Savithu360/savify.git
 cd savify
 npm install
 ```
