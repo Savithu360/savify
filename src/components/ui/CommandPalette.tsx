@@ -195,12 +195,14 @@ export const CommandPalette: React.FC<CommandPaletteProps> = ({
                       Recent
                     </h3>
                     <Button
-                      onPress={clearHistory}
-                      className="flex items-center gap-1.5 px-2 py-1 text-xs text-gray-500 hover:text-red-600 dark:text-gray-400 dark:hover:text-red-400 transition-colors duration-200"
-                    >
-                      <FiTrash2 className="w-3 h-3" />
-                      Clear
-                    </Button>
+  onPress={clearHistory}
+  className="flex items-center gap-1.5 px-2 py-1 text-xs ..."
+>
+  <span className="flex items-center gap-1.5">
+    <FiTrash2 className="w-3 h-3" />
+    Clear
+  </span>
+</Button>
                   </div>
                   <div className="space-y-1">
                     {recentItems.map((item, _index) => {
