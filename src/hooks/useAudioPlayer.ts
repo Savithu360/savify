@@ -466,16 +466,18 @@ export const useAudioPlayer = () => {
     }
 
     setState({
-      currentTrack: null,
-      isPlaying: false,
-      progress: 0,
-      volume: 80,
-      isShuffled: false,
-      repeatMode: "off",
-      isMinimized: false,
-      queue: [],
-      currentIndex: -1,
-    });
+  currentTrack: null,
+  isPlaying: false,
+  progress: 0,
+  volume: 80,
+  isShuffled: false,
+  repeatMode: "off",
+  isMinimized: false,
+  queue: [],
+  currentIndex: -1,
+  likedTracks: stateRef.current.likedTracks,
+  recentlyPlayed: stateRef.current.recentlyPlayed,
+});
   }, []);
 
   return {

@@ -157,9 +157,11 @@ export const CommandPalette: React.FC<CommandPaletteProps> = ({
             onPress={onClose}
             className="ml-2 p-1 text-gray-400 hover:text-gray-600 dark:hover:text-gray-300 transition-colors duration-200"
           >
-            <kbd className="px-2 py-1 text-xs font-mono bg-gray-100 dark:bg-gray-800 rounded border">
-              ESC
-            </kbd>
+            <span>
+              <kbd className="px-2 py-1 text-xs font-mono bg-gray-100 dark:bg-gray-800 rounded border">
+                ESC
+              </kbd>
+            </span>
           </Button>
         </div>
 
