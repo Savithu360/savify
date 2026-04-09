@@ -145,14 +145,14 @@ export const CommandPalette: React.FC<CommandPaletteProps> = ({
             value={query}
             onChange={(e) => setQuery(e.target.value)}
           />
-          {query && (
-            <button
-  onClick={() => setQuery('')}
-  className="ml-2 p-1 text-gray-400 hover:text-gray-600 dark:hover:text-gray-300 transition-colors duration-200"
->
-  <FiX className="w-4 h-4" />
-</button>
-          )}
+          {query ? (
+  <button
+    onClick={() => setQuery('')}
+    className="ml-2 p-1 text-gray-400 hover:text-gray-600 dark:hover:text-gray-300 transition-colors duration-200"
+  >
+    <FiX className="w-4 h-4" />
+  </button>
+) : null}
           <button
   onClick={onClose}
   className="ml-2 p-1 text-gray-400 hover:text-gray-600 dark:hover:text-gray-300 transition-colors duration-200"
